@@ -1,1 +1,7 @@
-# github-cloud-labb
+# GitHub Cloud Lab
+
+A hands-on repository for learning GitHub as a cloud platform.
+
+## Running
+
+python hello.py
