@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Flask App</title>
+    <title>Messages</title>
 </head>
 <body>
-    <h1>Welcome to My Website 🚀</h1>
-    <p>This page is served using Flask and HTML.</p>
-    <a href="/about">Go to About Page</a>
+
+<h1>Leave a Message 🚀</h1>
+
+<form method="POST">
+    Name:<br>
+    <input type="text" name="name"><br><br>
+
+    Message:<br>
+    <input type="text" name="content"><br><br>
+
+    <button type="submit">Send</button>
+</form>
+
+<h2>Saved Messages</h2>
+
+{% for msg in messages %}
+<p><b>{{ msg.name }}</b>: {{ msg.content }}</p>
+{% endfor %}
+
+<a href="/about">About</a>
+
 </body>
 </html>
